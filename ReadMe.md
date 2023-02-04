@@ -1,6 +1,6 @@
-#CS213 Software Methodology Project 1
+CS213 Software Methodology Project 1
 
-#University Roster Project
+University Roster Project
 #Your team will develop a simple software to help a university processes the student roster for tuition purpose. The
 #roster maintains a list of students who are currently registered. The initial phase is to provide a console-based
 #interactive user interface to manage the student roster. The software will read a sequence of line commands entered
