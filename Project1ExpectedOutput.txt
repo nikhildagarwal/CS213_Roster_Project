@@ -1,0 +1,192 @@
+Roster Manager running...
+
+a is an invalid command!
+p is an invalid command!
+r is an invalid command!
+ps is an invalid command!
+pc is an invalid command!
+Student roster is empty!
+l is an invalid command!
+Student roster is empty!
+Student roster is empty!
+blah is an invalid command!
+x is an invalid command!
+DOB invalid: 9/2/2022 younger than 16 years old.
+John Doe 1/2/2007 added to the roster.
+DOB invalid: 3/20/2007 younger than 16 years old.
+John Doe 12/20/2004 added to the roster.
+DOB invalid: 2/29/2003 not a valid calendar date!
+DOB invalid: 4/31/2003 not a valid calendar date!
+DOB invalid: 13/31/2003 not a valid calendar date!
+DOB invalid: 3/32/2003 not a valid calendar date!
+DOB invalid: -1/31/2003 not a valid calendar date!
+John Doe 4/3/2003 added to the roster.
+John Doe 4/3/2003 is already in the roster.
+John Doe 1/20/2003 added to the roster.
+John Doe 1/20/2003 is already in the roster.
+john doe 1/20/2003 is already in the roster.
+Major code invalid: AA
+Credits completed invalid: not an integer!
+Credits completed invalid: cannot be negative!
+Jane Doe 5/1/1996 added to the roster.
+Jane Doe 5/1/1996 is already in the roster.
+April March 3/31/2000 added to the roster.
+Mary Lindsey 12/1/2001 added to the roster.
+Duke Ellington 2/29/2004 added to the roster.
+Roy Brooks 8/8/1999 added to the roster.
+Roy Brooks 9/9/1999 added to the roster.
+Kate Lindsey 7/15/2002 added to the roster.
+Carl Brown 10/7/2004 added to the roster.
+Paul Siegel 5/1/2000 added to the roster.
+Bill Scanlan 5/1/1999 added to the roster.
+* Student roster sorted by last name, first name, DOB **
+Roy Brooks 8/8/1999 (01:640 MATH SAS) credits completed: 111 (Senior)
+Roy Brooks 9/9/1999 (04:547 ITI SC&I) credits completed: 100 (Senior)
+Carl Brown 10/7/2004 (01:198 CS SAS) credits completed: 75 (Junior)
+Jane Doe 5/1/1996 (01:198 CS SAS) credits completed: 30 (Sophomore)
+John Doe 1/20/2003 (33:136 BAIT RBS) credits completed: 60 (Junior)
+John Doe 4/3/2003 (01:198 CS SAS) credits completed: 29 (Freshman)
+John Doe 12/20/2004 (14:332 EE SOE) credits completed: 45 (Sophomore)
+John Doe 1/2/2007 (14:332 EE SOE) credits completed: 20 (Freshman)
+Duke Ellington 2/29/2004 (01:640 MATH SAS) credits completed: 46 (Sophomore)
+Kate Lindsey 7/15/2002 (04:547 ITI SC&I) credits completed: 59 (Sophomore)
+Mary Lindsey 12/1/2001 (33:136 BAIT RBS) credits completed: 89 (Junior)
+April March 3/31/2000 (33:136 BAIT RBS) credits completed: 109 (Senior)
+Bill Scanlan 5/1/1999 (01:198 CS SAS) credits completed: 120 (Senior)
+Paul Siegel 5/1/2000 (01:198 CS SAS) credits completed: 90 (Senior)
+* end of roster **
+John Doe 4/3/2003 removed from the roster.
+* Student roster sorted by last name, first name, DOB **
+Roy Brooks 8/8/1999 (01:640 MATH SAS) credits completed: 111 (Senior)
+Roy Brooks 9/9/1999 (04:547 ITI SC&I) credits completed: 100 (Senior)
+Carl Brown 10/7/2004 (01:198 CS SAS) credits completed: 75 (Junior)
+Jane Doe 5/1/1996 (01:198 CS SAS) credits completed: 30 (Sophomore)
+John Doe 1/20/2003 (33:136 BAIT RBS) credits completed: 60 (Junior)
+John Doe 12/20/2004 (14:332 EE SOE) credits completed: 45 (Sophomore)
+John Doe 1/2/2007 (14:332 EE SOE) credits completed: 20 (Freshman)
+Duke Ellington 2/29/2004 (01:640 MATH SAS) credits completed: 46 (Sophomore)
+Kate Lindsey 7/15/2002 (04:547 ITI SC&I) credits completed: 59 (Sophomore)
+Mary Lindsey 12/1/2001 (33:136 BAIT RBS) credits completed: 89 (Junior)
+April March 3/31/2000 (33:136 BAIT RBS) credits completed: 109 (Senior)
+Bill Scanlan 5/1/1999 (01:198 CS SAS) credits completed: 120 (Senior)
+Paul Siegel 5/1/2000 (01:198 CS SAS) credits completed: 90 (Senior)
+* end of roster **
+John Doe 4/3/2003 is not in the roster.
+John Doe 6/30/1999 added to the roster.
+* Student roster sorted by last name, first name, DOB **
+Roy Brooks 8/8/1999 (01:640 MATH SAS) credits completed: 111 (Senior)
+Roy Brooks 9/9/1999 (04:547 ITI SC&I) credits completed: 100 (Senior)
+Carl Brown 10/7/2004 (01:198 CS SAS) credits completed: 75 (Junior)
+Jane Doe 5/1/1996 (01:198 CS SAS) credits completed: 30 (Sophomore)
+John Doe 6/30/1999 (14:332 EE SOE) credits completed: 119 (Senior)
+John Doe 1/20/2003 (33:136 BAIT RBS) credits completed: 60 (Junior)
+John Doe 12/20/2004 (14:332 EE SOE) credits completed: 45 (Sophomore)
+John Doe 1/2/2007 (14:332 EE SOE) credits completed: 20 (Freshman)
+Duke Ellington 2/29/2004 (01:640 MATH SAS) credits completed: 46 (Sophomore)
+Kate Lindsey 7/15/2002 (04:547 ITI SC&I) credits completed: 59 (Sophomore)
+Mary Lindsey 12/1/2001 (33:136 BAIT RBS) credits completed: 89 (Junior)
+April March 3/31/2000 (33:136 BAIT RBS) credits completed: 109 (Senior)
+Bill Scanlan 5/1/1999 (01:198 CS SAS) credits completed: 120 (Senior)
+Paul Siegel 5/1/2000 (01:198 CS SAS) credits completed: 90 (Senior)
+* end of roster **
+* Student roster sorted by standing **
+John Doe 1/2/2007 (14:332 EE SOE) credits completed: 20 (Freshman)
+Carl Brown 10/7/2004 (01:198 CS SAS) credits completed: 75 (Junior)
+John Doe 1/20/2003 (33:136 BAIT RBS) credits completed: 60 (Junior)
+Mary Lindsey 12/1/2001 (33:136 BAIT RBS) credits completed: 89 (Junior)
+John Doe 6/30/1999 (14:332 EE SOE) credits completed: 119 (Senior)
+Roy Brooks 9/9/1999 (04:547 ITI SC&I) credits completed: 100 (Senior)
+Roy Brooks 8/8/1999 (01:640 MATH SAS) credits completed: 111 (Senior)
+April March 3/31/2000 (33:136 BAIT RBS) credits completed: 109 (Senior)
+Bill Scanlan 5/1/1999 (01:198 CS SAS) credits completed: 120 (Senior)
+Paul Siegel 5/1/2000 (01:198 CS SAS) credits completed: 90 (Senior)
+Jane Doe 5/1/1996 (01:198 CS SAS) credits completed: 30 (Sophomore)
+John Doe 12/20/2004 (14:332 EE SOE) credits completed: 45 (Sophomore)
+Duke Ellington 2/29/2004 (01:640 MATH SAS) credits completed: 46 (Sophomore)
+Kate Lindsey 7/15/2002 (04:547 ITI SC&I) credits completed: 59 (Sophomore)
+* end of roster **
+* Student roster sorted by school, major **
+John Doe 1/20/2003 (33:136 BAIT RBS) credits completed: 60 (Junior)
+Mary Lindsey 12/1/2001 (33:136 BAIT RBS) credits completed: 89 (Junior)
+April March 3/31/2000 (33:136 BAIT RBS) credits completed: 109 (Senior)
+Carl Brown 10/7/2004 (01:198 CS SAS) credits completed: 75 (Junior)
+Bill Scanlan 5/1/1999 (01:198 CS SAS) credits completed: 120 (Senior)
+Paul Siegel 5/1/2000 (01:198 CS SAS) credits completed: 90 (Senior)
+Jane Doe 5/1/1996 (01:198 CS SAS) credits completed: 30 (Sophomore)
+Roy Brooks 8/8/1999 (01:640 MATH SAS) credits completed: 111 (Senior)
+Duke Ellington 2/29/2004 (01:640 MATH SAS) credits completed: 46 (Sophomore)
+Roy Brooks 9/9/1999 (04:547 ITI SC&I) credits completed: 100 (Senior)
+Kate Lindsey 7/15/2002 (04:547 ITI SC&I) credits completed: 59 (Sophomore)
+John Doe 12/20/2004 (14:332 EE SOE) credits completed: 45 (Sophomore)
+John Doe 6/30/1999 (14:332 EE SOE) credits completed: 119 (Senior)
+John Doe 1/2/2007 (14:332 EE SOE) credits completed: 20 (Freshman)
+* end of roster **
+Carl Brown 10/7/2003 is not in the roster.
+Major code invalid: BB
+Carl Brown 10/7/2004 major changed to BAIT
+* Student roster sorted by school, major **
+John Doe 1/20/2003 (33:136 BAIT RBS) credits completed: 60 (Junior)
+Mary Lindsey 12/1/2001 (33:136 BAIT RBS) credits completed: 89 (Junior)
+April March 3/31/2000 (33:136 BAIT RBS) credits completed: 109 (Senior)
+Carl Brown 10/7/2004 (33:136 BAIT RBS) credits completed: 75 (Junior)
+Bill Scanlan 5/1/1999 (01:198 CS SAS) credits completed: 120 (Senior)
+Paul Siegel 5/1/2000 (01:198 CS SAS) credits completed: 90 (Senior)
+Jane Doe 5/1/1996 (01:198 CS SAS) credits completed: 30 (Sophomore)
+Roy Brooks 8/8/1999 (01:640 MATH SAS) credits completed: 111 (Senior)
+Duke Ellington 2/29/2004 (01:640 MATH SAS) credits completed: 46 (Sophomore)
+Roy Brooks 9/9/1999 (04:547 ITI SC&I) credits completed: 100 (Senior)
+Kate Lindsey 7/15/2002 (04:547 ITI SC&I) credits completed: 59 (Sophomore)
+John Doe 12/20/2004 (14:332 EE SOE) credits completed: 45 (Sophomore)
+John Doe 6/30/1999 (14:332 EE SOE) credits completed: 119 (Senior)
+John Doe 1/2/2007 (14:332 EE SOE) credits completed: 20 (Freshman)
+* end of roster **
+* Students in sas *
+Roy Brooks 8/8/1999 (01:640 MATH SAS) credits completed: 111 (Senior)
+Jane Doe 5/1/1996 (01:198 CS SAS) credits completed: 30 (Sophomore)
+Duke Ellington 2/29/2004 (01:640 MATH SAS) credits completed: 46 (Sophomore)
+Bill Scanlan 5/1/1999 (01:198 CS SAS) credits completed: 120 (Senior)
+Paul Siegel 5/1/2000 (01:198 CS SAS) credits completed: 90 (Senior)
+* end of list **
+* Students in SAS *
+Roy Brooks 8/8/1999 (01:640 MATH SAS) credits completed: 111 (Senior)
+Jane Doe 5/1/1996 (01:198 CS SAS) credits completed: 30 (Sophomore)
+Duke Ellington 2/29/2004 (01:640 MATH SAS) credits completed: 46 (Sophomore)
+Bill Scanlan 5/1/1999 (01:198 CS SAS) credits completed: 120 (Senior)
+Paul Siegel 5/1/2000 (01:198 CS SAS) credits completed: 90 (Senior)
+* end of list **
+School doesn't exist: ABC
+* Students in SOE *
+John Doe 6/30/1999 (14:332 EE SOE) credits completed: 119 (Senior)
+John Doe 12/20/2004 (14:332 EE SOE) credits completed: 45 (Sophomore)
+John Doe 1/2/2007 (14:332 EE SOE) credits completed: 20 (Freshman)
+* end of list **
+* Students in SC&I *
+Roy Brooks 9/9/1999 (04:547 ITI SC&I) credits completed: 100 (Senior)
+Kate Lindsey 7/15/2002 (04:547 ITI SC&I) credits completed: 59 (Sophomore)
+* end of list **
+* Students in RBS *
+Carl Brown 10/7/2004 (33:136 BAIT RBS) credits completed: 75 (Junior)
+John Doe 1/20/2003 (33:136 BAIT RBS) credits completed: 60 (Junior)
+Mary Lindsey 12/1/2001 (33:136 BAIT RBS) credits completed: 89 (Junior)
+April March 3/31/2000 (33:136 BAIT RBS) credits completed: 109 (Senior)
+* end of list **
+Sunny Patel 1/31/2006 added to the roster.
+* Student roster sorted by standing **
+John Doe 1/2/2007 (14:332 EE SOE) credits completed: 20 (Freshman)
+Sunny Patel 1/31/2006 (01:640 MATH SAS) credits completed: 0 (Freshman)
+Carl Brown 10/7/2004 (33:136 BAIT RBS) credits completed: 75 (Junior)
+John Doe 1/20/2003 (33:136 BAIT RBS) credits completed: 60 (Junior)
+Mary Lindsey 12/1/2001 (33:136 BAIT RBS) credits completed: 89 (Junior)
+Paul Siegel 5/1/2000 (01:198 CS SAS) credits completed: 90 (Senior)
+Roy Brooks 8/8/1999 (01:640 MATH SAS) credits completed: 111 (Senior)
+Roy Brooks 9/9/1999 (04:547 ITI SC&I) credits completed: 100 (Senior)
+John Doe 6/30/1999 (14:332 EE SOE) credits completed: 119 (Senior)
+April March 3/31/2000 (33:136 BAIT RBS) credits completed: 109 (Senior)
+Bill Scanlan 5/1/1999 (01:198 CS SAS) credits completed: 120 (Senior)
+John Doe 12/20/2004 (14:332 EE SOE) credits completed: 45 (Sophomore)
+Duke Ellington 2/29/2004 (01:640 MATH SAS) credits completed: 46 (Sophomore)
+Jane Doe 5/1/1996 (01:198 CS SAS) credits completed: 30 (Sophomore)
+Kate Lindsey 7/15/2002 (04:547 ITI SC&I) credits completed: 59 (Sophomore)
+* end of roster **
+q is an invalid command!
+Roster Manager terminated.

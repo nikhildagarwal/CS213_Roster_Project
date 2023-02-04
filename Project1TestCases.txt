@@ -1,0 +1,76 @@
+a
+p
+r
+ps
+pc
+P
+l
+PS
+PC
+blah
+x
+
+A John Doe 9/2/2022 EE 10
+A John Doe 1/2/2007 EE 20
+A John Doe 3/20/2007 EE 20 
+A John Doe 12/20/2004 EE 45 
+A John Doe 2/29/2003 EE 105 
+A John Doe 4/31/2003  EE 105
+A John Doe 13/31/2003  EE 105
+A John Doe 3/32/2003  EE 105
+A John Doe -1/31/2003  EE 105
+A John Doe 4/3/2003  CS 29
+A John Doe 4/3/2003  CS 29
+A John Doe 1/20/2003  bait 60
+A John Doe 1/20/2003  bait 60
+A john doe 1/20/2003  bait 60
+A April Doe 1/20/2003   AA 105
+A April Doe 1/20/2003   EE AA
+A April Doe 1/20/2003   EE -1
+
+A Jane Doe 5/1/1996  CS 30
+A Jane Doe 5/1/1996  CS 30
+A April March 3/31/2000  BAIT 109
+A Mary Lindsey 12/1/2001  BAIT 89
+A Duke Ellington 2/29/2004  math 46
+A Roy Brooks 8/8/1999  math 111
+A Roy Brooks 9/9/1999  iti 100
+A Kate Lindsey 7/15/2002  ITI 59
+A Carl Brown 10/7/2004  cs 75
+A Paul Siegel 5/1/2000  CS 90 
+A Bill Scanlan 5/1/1999 CS 120  
+P
+
+R John Doe 4/3/2003
+P
+R John Doe 4/3/2003
+A John Doe 6/30/1999 EE 119 
+P
+PS
+PC
+C Carl Brown 10/7/2003 BAIT
+C Carl Brown 10/7/2004 BB
+C Carl Brown 10/7/2004 BAIT
+PC
+L sas
+L SAS
+L ABC
+L SOE
+L SC&I
+L RBS
+A Sunny Patel 1/31/2006 MATH 0
+PS
+q
+Q
+This line is a garbage line to test the Q command.
+
+
+
+
+
+
+
+
+
+
+
