@@ -1,6 +1,7 @@
 package group;
 import java.util.StringTokenizer;
 
+/*@author Nikhil Agarwal*/
 public enum Major {
     CS("01:198","SAS"),
     MATH("01:640","SAS"),

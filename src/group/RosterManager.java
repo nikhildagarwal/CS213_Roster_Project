@@ -1,8 +1,8 @@
 package group;
 import java.util.Scanner;
 
+/*@author Nikhil Agarwal*/
 public class RosterManager {
-
     public static final int MIN_CREDITS = 0;
     public static final int CODE_INDEX =0;
     public static final int FIRSTNAME_INDEX =1;

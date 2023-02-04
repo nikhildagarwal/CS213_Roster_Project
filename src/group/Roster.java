@@ -1,6 +1,6 @@
 package group;
-//import java.util.StringTokenizer;
 
+/*@author Nikhil Agarwal*/
 public class Roster {
     private Student[] roster;
     private int size;

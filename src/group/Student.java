@@ -1,5 +1,6 @@
 package group;
 
+/*@author Nikhil Agarwal*/
 public class Student implements Comparable<Student>{
     private Profile profile;
     private Major major;
