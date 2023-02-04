@@ -12,14 +12,23 @@ public class Profile implements Comparable<Profile>{
         this.dob = dob;
     }
 
+    /**
+     * @return Gets last name of Profile Object.
+     */
     public String getLastName(){
         return lname;
     }
 
+    /**
+     * @return Gets first name of Profile Object.
+     */
     public String getFirstName(){
         return fname;
     }
 
+    /**
+     * @return Gets date of Profile Object.
+     */
     public Date getDate(){
         return dob;
     }

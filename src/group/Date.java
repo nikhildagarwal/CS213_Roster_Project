@@ -26,7 +26,7 @@ public class Date implements Comparable<Date>{
     private static final int FEBRUARY = 2;
     private static final int DECEMBER = 12;
     private static final int INDEX_DIFF = 1;
-    private static final int FIRSTDAY = 1;
+    private static final int FIRST_DAY = 1;
     private static final int LEAP_YEAR_DAYS = 29;
     private static final int MIN_YEAR = 1900;
     private static final int MIN_AGE = 16;
@@ -149,7 +149,7 @@ public class Date implements Comparable<Date>{
             }
         }
     }
-    
+
     /**
      * Checks if a day value is within the total number of days in a given month.
      * @param day day to be checked.
@@ -157,7 +157,7 @@ public class Date implements Comparable<Date>{
      * @return true if the day is within the number of days in the month, false otherwise.
      */
     private boolean validDay(int day,int totalDays){
-        if(day>=FIRSTDAY && day<=totalDays){
+        if(day>=FIRST_DAY && day<=totalDays){
             return true;
         }
         return false;
