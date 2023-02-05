@@ -74,8 +74,9 @@ public class Profile implements Comparable<Profile>{
 
     /**
      * Overrides compareTo method from Java Comparable class.
+     * Syntax: profile1.compareTo(profile2)
      * @param profile the object to be compared.
-     * @return
+     * @return positive if profile1 is lexgraphically greater than profile2, 0 if equal, negative otherwise.
      */
     @Override
     public int compareTo(Profile profile){
