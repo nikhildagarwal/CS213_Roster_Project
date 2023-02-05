@@ -203,6 +203,8 @@ public class Roster {
      * The comparable in this method, is the (String) grade of the student Ex:"Freshman".
      * @param roster array of student objects to be sorted.
      */
+    
+     /* 
     private void rosterStandingSort(Student[] roster){
         int[] compareables = new int[size-1];
         for(int i =0;i<size-1;i++){
@@ -223,7 +225,36 @@ public class Roster {
             }
         }
     }
+    */
+    private void rosterStandingSort(Student[] roster){
+        
+            for(int i = 0; i < roster.length; i++)
+            {
+                for(int j = i + 1; j < roster.length; j++)
+                {
+                    String grade1 = roster[i].getStanding(roster[i].getCreditCompleted());
+                    String grade2 = roster[j].getStanding(roster[j].getCreditCompleted());
+                    int comparison = grade1.compareTo(grade2);
 
+                    if(comparison > 0)
+                    {
+                        Student temp = roster[i];
+                        roster[i] = roster[j];
+                        roster[j] = temp;
+                        
+                    }
+                    
+                }
+            }
+
+            
+            
+        
+        
+            
+    }
+
+    
     /**
      * * Filters our roster by school.
      * Checks to see if the school is valid school at our university.
