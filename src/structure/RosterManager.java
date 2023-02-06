@@ -23,10 +23,18 @@ public class RosterManager {
     public static final int SCHOOL_INDEX = 1;
     public static final int FULL_ROSTER = 0;
     public static final int SCHOOL_ROSTER = 1;
-    public static final String allSchools = "";
+    public static final String ALL_SCHOOLS = "";
 
     /**
      * this is a method that will continuously run the program until the user inputs in a "Q" to terminate the program.
+     * A -> add student         Ex: A John Doe 1/20/2003 EE 80
+     * R -> remove student      Ex: R John Doe 1/20/2003
+     * P -> print sorted roster (lname, fname, DoB)
+     * PS -> print sorted roster (standing)
+     * PC -> print sorted roster (school, major)
+     * L -> print list of student in roster from a specified school sorted (lname, fname, DoB)      Ex: L SAS
+     * C -> change student major        Ex: C John Doe 1/20/2003 CS
+     * Q -> terminate program       
      * this method will be used in RunProject1.java (Driver class)
      */
     public void run(){
@@ -44,7 +52,7 @@ public class RosterManager {
                         processRemove(tokens,roster);
                         break;
                     case "P":
-                        processPrint(roster,FULL_ROSTER,allSchools);
+                        processPrint(roster,FULL_ROSTER,ALL_SCHOOLS);
                         break;
                     case "PS":
                         processPrintStanding(roster);
@@ -65,7 +73,7 @@ public class RosterManager {
                         System.out.println(tokens[0]+" is an invalid command!");
                 }
             }catch (Exception e){
-
+                System.out.println("Invalid input!");
             }
         }
     }
@@ -157,7 +165,7 @@ public class RosterManager {
      * Displays to the user whether the roster or list is empty, and displays the roster
      * @param roster argument used to determine if the roster is empty and also used to call print method from roster class
      * @param typeOfRoster type of roster (Full student roster, school specific roster).
-     * @param school if the type of roster is a school list, the school of the list will be input, otherwise this parameter is null.
+     * @param school if the type of roster is a school list, the school of the list will be input, otherwise this parameter is an empty string.
      */
     private void processPrint(Roster roster,int typeOfRoster,String school){
         if(roster.isEmpty()){
