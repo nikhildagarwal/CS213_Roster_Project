@@ -5,7 +5,7 @@ import java.util.StringTokenizer;
  * Major objects that hold major codes and the corresponding school @ Rutgers.
  * Using this class we can check if a certain school is a valid school @ Rutgers.
  * Compare two Majors to each other based on school (alphabetically) and then major code (numerically).
- * @author Nikhil Agarwal
+ * @author Nikhil Agarwal, Hyeon Oh
  */
 public enum Major {
     CS("01:198","SAS"),

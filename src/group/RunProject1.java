@@ -3,7 +3,7 @@ package group;
 /**
  * Driver class for our Roster Project.
  * Contains main method.
- * @author Nikhil Agarwal
+ * @author Nikhil Agarwal, Hyeon Oh
  */
 public class RunProject1 {
 

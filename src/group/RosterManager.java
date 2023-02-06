@@ -1,7 +1,10 @@
 package group;
 import java.util.Scanner;
 
-/*@author Nikhil Agarwal*/
+/**
+ * Implements the RosterManager class to take care of the roster and make changes
+ * @author Nikhil Agarwal, Hyeon Oh
+*/
 public class RosterManager {
     public static final int MIN_CREDITS = 0;
     public static final int CODE_INDEX =0;
@@ -16,6 +19,10 @@ public class RosterManager {
     public static final int SCHOOL_ROSTER = 1;
     public static final String allSchools = "";
 
+    /**
+     * this is a method that will continously run the program until the user inputs in a command to stop
+     * this method will be used in RunProject1.java 
+     */
     public void run(){
         Roster roster = new Roster();
         System.out.println("Roster Manager running...");
@@ -57,6 +64,11 @@ public class RosterManager {
         }
     }
 
+    /**
+     * uses string methods such as split to take inputs separately 
+     * @param command the command which is taken to be split 
+     * @return newLine which is a string array that returns the commands
+     */
     private String[] processLine(String command){
         String[] line = command.split("\\s");
         int counter = 0;
@@ -71,6 +83,11 @@ public class RosterManager {
         return newLine;
     }
 
+    /**
+     * Processes the school list 
+     * @param tokens string array that is taken from command line from the user
+     * @param roster used to determine to see if school is valid
+     */
     private void processSchoolList(String[] tokens,Roster roster){
         String school = tokens[SCHOOL_INDEX].toUpperCase();
         Roster schoolRoster = new Roster();
@@ -82,6 +99,11 @@ public class RosterManager {
         processPrint(schoolRoster,SCHOOL_ROSTER,tokens[SCHOOL_INDEX]);
     }
 
+    /**
+     * Changes a student's major 
+     * @param tokens string array that is taken from the command line from the user
+     * @param roster argument which is passed to change the student's major
+     */
     private void processChange(String[] tokens, Roster roster){
         Major major = grabMajor(tokens);
         if(major==null){
@@ -97,6 +119,10 @@ public class RosterManager {
         }
     }
 
+    /**
+     * Displays the roster sorted by school, major
+     * @param roster the argument that is to be displayed
+     */
     private void processPrintMajor(Roster roster){
         if(roster.isEmpty()){
             System.out.println("Student roster is empty!");
@@ -107,6 +133,11 @@ public class RosterManager {
         System.out.println("* end of roster **");
     }
 
+    /**
+     * Displays the roster sorted by standing by calling printByStanding method from the roster class
+     * If the roster is empty, it will display to the user that it is empty 
+     * @param roster the argument that is to be displayed
+     */
     private void processPrintStanding(Roster roster){
         if(roster.isEmpty()){
             System.out.println("Student roster is empty!");
@@ -117,6 +148,12 @@ public class RosterManager {
         System.out.println("* end of roster **");
     }
 
+    /**
+     * Displays to the user whether the roster or list is empty, and displays the roster
+     * @param roster argument used to determine if the roster is empty and also used to call print method from roster class
+     * @param typeOfRoster type of roster 
+     * @param school type of school 
+     */
     private void processPrint(Roster roster,int typeOfRoster,String school){
         if(roster.isEmpty()){
             if(typeOfRoster==FULL_ROSTER){
@@ -144,6 +181,11 @@ public class RosterManager {
 
     }
 
+    /**
+     * Used to remove a student from the roster 
+     * @param tokens input taken from the user at the command line
+     * @param roster argument that is passed to remove a student from the roster 
+     */
     private void processRemove(String[] tokens,Roster roster){
         Student studentToRemove = new Student(new Profile(tokens[LASTNAME_INDEX],tokens[FIRSTNAME_INDEX],new Date(tokens[DATE_INDEX])),Major.CS,0);
         boolean removed = roster.remove(studentToRemove);
@@ -154,6 +196,11 @@ public class RosterManager {
         System.out.println(studentToRemove.getProfile()+" is not in the roster.");
     }
 
+    /**
+     * Used to add a student to the roster
+     * @param tokens string array that is taken from the command line from the user 
+     * @param roster argument that is passed to add a student to the roster
+     */
     private void processAdd(String[] tokens,Roster roster){
         Date dob = new Date(tokens[DATE_INDEX]);
         Date today = new Date();
@@ -190,6 +237,11 @@ public class RosterManager {
 
     }
 
+    /**
+     * Checks to see which string matches the major 
+     * @param tokens string array which is taken from the command line from the user 
+     * @return major returns the major 
+     */
     private Major grabMajor(String[] tokens){
         Major major = null;
         switch(tokens[MAJOR_INDEX].toUpperCase()){

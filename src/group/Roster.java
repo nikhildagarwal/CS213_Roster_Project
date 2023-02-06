@@ -6,7 +6,7 @@ package group;
  * Check if our DS is empty.
  * Expand the size of our DS as we add more elements
  * As well as sorting methods and printing methods for our Roster DS.
- * @author Nikhil Agarwal
+ * @author Nikhil Agarwal, Hyeon Oh
  */
 public class Roster {
     private Student[] roster;
@@ -204,7 +204,7 @@ public class Roster {
      * @param roster array of student objects to be sorted.
      */
     
-     /* 
+    
     private void rosterStandingSort(Student[] roster){
         int[] compareables = new int[size-1];
         for(int i =0;i<size-1;i++){
@@ -225,35 +225,6 @@ public class Roster {
             }
         }
     }
-    */
-    private void rosterStandingSort(Student[] roster){
-        
-            for(int i = 0; i < roster.length; i++)
-            {
-                for(int j = i + 1; j < roster.length; j++)
-                {
-                    String grade1 = roster[i].getStanding(roster[i].getCreditCompleted());
-                    String grade2 = roster[j].getStanding(roster[j].getCreditCompleted());
-                    int comparison = grade1.compareTo(grade2);
-
-                    if(comparison > 0)
-                    {
-                        Student temp = roster[i];
-                        roster[i] = roster[j];
-                        roster[j] = temp;
-                        
-                    }
-                    
-                }
-            }
-
-            
-            
-        
-        
-            
-    }
-
     
     /**
      * * Filters our roster by school.
