@@ -1,26 +1,26 @@
 package group;
 
 /**
- * Implements our Student object as a comparable object
- * Contains the student's profile, major, and credits completed
- * Contains overrides for equals, toString, and compareTo 
- * Implements methods to calculate a student's standing
- * @author Nikhil Agarwal, Hyeon Oh
-*/
+ * Class to implement the Student object.
+ * Holds a profile object, Major enum, and an integer.
+ * Contains methods to override inherited methods from the Java objects and comparable classes.
+ * Calculate the standing of a Student
+ * @author Nikhil Agarwal
+ */
 public class Student implements Comparable<Student>{
     private Profile profile;
     private Major major;
     private int creditCompleted;
 
-    public static final int SOPHOMORE = 30;
-    public static final int JUNIOR = 60;
-    public static final int SENIOR = 90;
+    private static final int SOPHOMORE = 30;
+    private static final int JUNIOR = 60;
+    private static final int SENIOR = 90;
 
     /**
-     * Default constructor for the Student object
-     * @param profile corresponding profile for the student
-     * @param major corresponding major for the student 
-     * @param creditCompleted corresponding credits completed for the student 
+     * Constructor to initialize the Student Object.
+     * @param profile Profile Object of Student.
+     * @param major Major of the student.
+     * @param creditCompleted the number of credits that a student has completed.
      */
     public Student(Profile profile,Major major, int creditCompleted){
         this.profile = profile;
@@ -29,9 +29,8 @@ public class Student implements Comparable<Student>{
     }
 
     /**
-     * Override of toString method in object class in Java
-     * Prints the student's first name, last name, date of birth, major, and credits completed 
-     * @return returns student information as stated above in a string 
+     * Override toString method from Java Objects class.
+     * @return Student as a string in format: firstName lastName DoB (departmentCode Major Scool) creditsCompleted
      */
     @Override
     public String toString(){
@@ -39,10 +38,9 @@ public class Student implements Comparable<Student>{
     }
 
     /**
-     * Override of equals method in object class in Java
-     * Compares student attributes
-     * @param obj object to be checked with
-     * @return true if the students are equal, false otherwise
+     * Override equals method from Java Objects class.
+     * @param obj object to be checked.
+     * @return true if object equals Student, false if otherwise.
      */
     @Override
     public boolean equals(Object obj){
@@ -51,9 +49,10 @@ public class Student implements Comparable<Student>{
     }
 
     /**
-     * Override of compareTo method in object class in Java 
-     * @param student the object that is being compared 
-     * @return -1 if object lexicographically precedes argument, 0 if equal, else 1
+     * Override compareTo method from Java Comparable class.
+     * Syntax: student1.compareTo(student2)
+     * @param student the object to be compared.
+     * @return positive if profile of student1 is lexographically greater than student2, 0 if profiles are equal, negative otherwise.
      */
     @Override
     public int compareTo(Student student){
@@ -61,9 +60,12 @@ public class Student implements Comparable<Student>{
     }
 
     /**
-     * Assigns a student's standing depending on how many credits they have completed
-     * @param creditCompleted
-     * @return (Freshman), (Sophomore), (Junior), (Senior)
+     * Checks how many credits a student has completed and returns the standing of the student.
+     * @param creditCompleted number of credits student has completed.
+     * @return Freshman if creditsCompleted<30,
+     *         Sophomore if 30<=creditsCompleted<60,
+     *         Junior if 60<=creditsCompleted<90,
+     *         Senior if creditsCompleted>=90
      */
     public String getStanding(int creditCompleted){
         if(creditCompleted<SOPHOMORE){
@@ -78,43 +80,40 @@ public class Student implements Comparable<Student>{
     }
 
     /**
-     * 
-     * @param major the major of the student
-     * @return returns major code and school
+     * Changes Major of student to a particular newMajor.
+     * @param newMajor the major we want to set Major to.
      */
-    private String getCode_School(Major major){
-        return "("+major.getMajorCode() +" "+ major +" "+ major.getSchool()+")";
+    public void changeMajor(Major newMajor){
+        major = newMajor;
     }
 
     /**
-     * returns profile of the student 
-     * @return profile
+     * @return Profile of our student (last name, first name, DoB)
      */
     public Profile getProfile(){
         return profile;
     }
 
     /**
-     * returns major of the student
-     * @return major
+     * @return Major of the student.
      */
     public Major getMajor(){
         return major;
     }
 
     /**
-     * returns credits completed of the student
-     * @return creditCompleted
+     * @return return number of Credits that the student has completed.
      */
     public int getCreditCompleted(){
         return creditCompleted;
     }
 
     /**
-     * changes the student's major
-     * @param newMajor
+     * Helper method to format output of the Major portion of our student object.
+     * @param major major to be formatted to string.
+     * @return String of formatted major. Ex: CS -> (01:198 CS SAS)
      */
-    public void changeMajor(Major newMajor){
-        major = newMajor;
+    private String getCode_School(Major major){
+        return "("+major.getMajorCode() +" "+ major +" "+ major.getSchool()+")";
     }
 }

@@ -1,22 +1,22 @@
 package group;
 
 /**
- * Implements our profile object as a comparable object
- * Contains last name, first name, and date of birth
- * Overrides for equals, toString, and compareTo
- * Implements simple getter methods
- * @author Nikhil Agarwal, Hyeon Oh
-*/
+ * Class to implement Profile Object.
+ * Holds LastName, FirstName, and DoB as parameters.
+ * Contains methods to fetch profile values from outside this class,
+ * as well as methods that override equals, toString, and compareTo.
+ * @author Nikhil Agarwal
+ */
 public class Profile implements Comparable<Profile>{
     private String lname;
     private String fname;
     private Date dob;
 
     /**
-     * Default constructor for Profile object
-     * @param lname corresponding last name for the profile
-     * @param fname corresponding first name for the profile
-     * @param dob corresponding date of birth for the profile
+     * Constructor for Profile Object.
+     * @param lname Last Name of profile.
+     * @param fname First Name of profile.
+     * @param dob DoB of profile.
      */
     public Profile(String lname, String fname, Date dob){
         this.lname = lname;
@@ -25,33 +25,29 @@ public class Profile implements Comparable<Profile>{
     }
 
     /**
-     * return last name of the Profile object
-     * @return lname
+     * @return Gets last name of Profile Object.
      */
     public String getLastName(){
         return lname;
     }
 
     /**
-     * return first name of the Profile object
-     * @return fname
+     * @return Gets first name of Profile Object.
      */
     public String getFirstName(){
         return fname;
     }
 
     /**
-     * return date of birth
-     * @return dob
+     * @return Gets date of Profile Object.
      */
     public Date getDate(){
         return dob;
     }
 
     /**
-     * Override of toString method in object class in Java
-     * Prints the student's first name, last name, and date of birth
-     * @return student's profile in a string
+     * Overrides toString method from Java Object class.
+     * @return Profile as string printed as: firstName lastName doB
      */
     @Override
     public String toString(){
@@ -59,10 +55,9 @@ public class Profile implements Comparable<Profile>{
     }
 
     /**
-     * Override of equals method in object class in Java
-     * Compares profile attributes first name, last name, and date of birth 
-     * @param obj object to be checked with
-     * @return true if the Profile objects are equal, else return false 
+     * Overrides equals method from Java Object class.
+     * @param obj object to be checked.
+     * @return true if object equals Profile, false if otherwise.
      */
     @Override
     public boolean equals(Object obj){
@@ -78,9 +73,10 @@ public class Profile implements Comparable<Profile>{
     }
 
     /**
-     * Override of compareTo method in object class in Java
-     * @param profile the object that is being compared
-     * @return -1 if string lexicographically precedes argument string, 0 if equal, 1 if string lexicographically follows the argument string
+     * Overrides compareTo method from Java Comparable class.
+     * Syntax: profile1.compareTo(profile2)
+     * @param profile the object to be compared.
+     * @return positive if profile1 is lexgraphically greater than profile2, 0 if equal, negative otherwise.
      */
     @Override
     public int compareTo(Profile profile){

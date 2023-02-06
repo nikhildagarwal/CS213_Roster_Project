@@ -49,6 +49,7 @@ public enum Major {
      * @return true if school is one of the following (SAS, SOE, SC&I, RBS), false otherwise.
      */
     public boolean isValidSchool(String school){
+        school.toUpperCase();
         boolean valid = false;
         if(school.equals(CS.school)){
             valid = true;
