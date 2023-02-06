@@ -1,4 +1,4 @@
-package group;
+package data;
 
 /**
  * Class to implement Profile Object.

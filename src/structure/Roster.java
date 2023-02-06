@@ -1,4 +1,7 @@
-package group;
+package structure;
+
+import data.Student;
+import enumerated.Major;
 
 /**
  * Roster Data Structure that holds Student Objects.

@@ -1,4 +1,6 @@
-package group;
+package driver;
+
+import structure.RosterManager;
 
 /**
  * Driver class for our Roster Project.

@@ -1,4 +1,4 @@
-package group;
+package data;
 import java.util.Calendar;
 import java.util.StringTokenizer;
 
@@ -234,43 +234,43 @@ public class Date implements Comparable<Date>{
         Date date = new Date("2/29/2011");
         boolean expectedOutput = false;
         boolean actualOutput = date.isValid();
-        System.out.println("**Test case #1: a date in a non-leap year has only 28 days in February.");
+        System.out.println("** Test case #1: a date in a non-leap year has only 28 days in February.");
         testResult(date, expectedOutput, actualOutput);
 
         date = new Date("2/29/2016");
         expectedOutput = true;
         actualOutput = date.isValid();
-        System.out.println("**Test case #2: a date in a leap year has 29 days in February.");
+        System.out.println("** Test case #2: a date in a leap year has 29 days in February.");
         testResult(date, expectedOutput, actualOutput);
 
         date = new Date("13/21/1999");
         expectedOutput = false;
         actualOutput = date.isValid();
-        System.out.println("**Test case #3: a date with an invalid month value. ");
+        System.out.println("** Test case #3: a date with an invalid month value. ");
         testResult(date, expectedOutput, actualOutput);
 
         date = new Date("3/32/2003");
         expectedOutput = false;
         actualOutput = date.isValid();
-        System.out.println("**Test case #4: a date with an invalid day value. ");
+        System.out.println("** Test case #4: a date with an invalid day value. ");
         testResult(date, expectedOutput, actualOutput);
 
         date = new Date("1/29/1899");
         expectedOutput = false;
         actualOutput = date.isValid();
-        System.out.println("**Test case #6: a date with an invalid year value. ");
+        System.out.println("** Test case #6: a date with an invalid year value. ");
         testResult(date, expectedOutput, actualOutput);
 
         date = new Date("4/31/2003");
         expectedOutput = false;
         actualOutput = date.isValid();
-        System.out.println("**Test case #6: a date with an invalid number of days in a specific month. ");
+        System.out.println("** Test case #6: a date with an invalid number of days in a specific month. ");
         testResult(date, expectedOutput, actualOutput);
 
         date = new Date("1/31/2003");
         expectedOutput = true;
         actualOutput = date.isValid();
-        System.out.println("**Test case #7: a date with a valid number of days in a specific month. ");
+        System.out.println("** Test case #7: a date with a valid number of days in a specific month. ");
         testResult(date, expectedOutput, actualOutput);
 
 

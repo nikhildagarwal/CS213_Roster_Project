@@ -1,4 +1,6 @@
-package group;
+package data;
+
+import enumerated.Major;
 
 /**
  * Class to implement the Student object.

@@ -1,8 +1,14 @@
-package group;
+package structure;
+import data.Date;
+import data.Profile;
+import data.Student;
+import enumerated.Major;
+
 import java.util.Scanner;
 
 /**
- * Implements the RosterManager class to take care of the roster and make changes
+ * Implements the RosterManager class to take care of the roster and make changes to the roster.
+ * Processes all console inputs and outputs a response to the console.
  * @author Nikhil Agarwal, Hyeon Oh
 */
 public class RosterManager {
@@ -20,8 +26,8 @@ public class RosterManager {
     public static final String allSchools = "";
 
     /**
-     * this is a method that will continously run the program until the user inputs in a command to stop
-     * this method will be used in RunProject1.java 
+     * this is a method that will continuously run the program until the user inputs in a "Q" to terminate the program.
+     * this method will be used in RunProject1.java (Driver class)
      */
     public void run(){
         Roster roster = new Roster();
@@ -76,7 +82,6 @@ public class RosterManager {
         for(String token:line){
             if(!token.equals("")){
                 newLine[counter] = token;
-                //System.out.println(newLine[counter]);
                 counter++;
             }
         }
@@ -86,7 +91,7 @@ public class RosterManager {
     /**
      * Processes the school list 
      * @param tokens string array that is taken from command line from the user
-     * @param roster used to determine to see if school is valid
+     * @param roster the roster object that has all students currently @Rutgers, students will be added to a school list from this roster.
      */
     private void processSchoolList(String[] tokens,Roster roster){
         String school = tokens[SCHOOL_INDEX].toUpperCase();
@@ -100,9 +105,9 @@ public class RosterManager {
     }
 
     /**
-     * Changes a student's major 
+     * Changes a student's major if the student is found the roster and the major they want to change too is valid.
      * @param tokens string array that is taken from the command line from the user
-     * @param roster argument which is passed to change the student's major
+     * @param roster the roster object that will be searched to find a specific student.
      */
     private void processChange(String[] tokens, Roster roster){
         Major major = grabMajor(tokens);
@@ -151,8 +156,8 @@ public class RosterManager {
     /**
      * Displays to the user whether the roster or list is empty, and displays the roster
      * @param roster argument used to determine if the roster is empty and also used to call print method from roster class
-     * @param typeOfRoster type of roster 
-     * @param school type of school 
+     * @param typeOfRoster type of roster (Full student roster, school specific roster).
+     * @param school if the type of roster is a school list, the school of the list will be input, otherwise this parameter is null.
      */
     private void processPrint(Roster roster,int typeOfRoster,String school){
         if(roster.isEmpty()){
@@ -184,7 +189,7 @@ public class RosterManager {
     /**
      * Used to remove a student from the roster 
      * @param tokens input taken from the user at the command line
-     * @param roster argument that is passed to remove a student from the roster 
+     * @param roster roster object that the student object will be removed from.
      */
     private void processRemove(String[] tokens,Roster roster){
         Student studentToRemove = new Student(new Profile(tokens[LASTNAME_INDEX],tokens[FIRSTNAME_INDEX],new Date(tokens[DATE_INDEX])),Major.CS,0);
@@ -197,9 +202,9 @@ public class RosterManager {
     }
 
     /**
-     * Used to add a student to the roster
-     * @param tokens string array that is taken from the command line from the user 
-     * @param roster argument that is passed to add a student to the roster
+     * Used to add a student to the roster, checks to see if student is a valid student.
+     * @param tokens string array that is taken from the command line from the user .
+     * @param roster roster object that the student object will be added too.
      */
     private void processAdd(String[] tokens,Roster roster){
         Date dob = new Date(tokens[DATE_INDEX]);
@@ -216,7 +221,6 @@ public class RosterManager {
         if(major ==null){
             return;
         }
-        //System.out.println(major);
         try{
             if(Integer.parseInt(tokens[CREDITS_INDEX])<MIN_CREDITS){
                 System.out.println("Credits completed invalid: cannot be negative!");
@@ -238,9 +242,9 @@ public class RosterManager {
     }
 
     /**
-     * Checks to see which string matches the major 
+     * Checks to see if a given console input matches a valid major in enum class Major.
      * @param tokens string array which is taken from the command line from the user 
-     * @return major returns the major 
+     * @return major returns the major, null if major is not valid.
      */
     private Major grabMajor(String[] tokens){
         Major major = null;

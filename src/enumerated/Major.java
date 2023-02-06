@@ -1,4 +1,4 @@
-package group;
+package enumerated;
 import java.util.StringTokenizer;
 
 /**
