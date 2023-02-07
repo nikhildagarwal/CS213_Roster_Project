@@ -21,7 +21,8 @@ public class Roster {
 
 
     /**
-     * Initialize Roster Object (Constructor)
+     * Initialize Roster Object.
+     * Constructor Method.
      */
     public Roster(){
         this.roster = new Student[INITIAL_SIZE];
