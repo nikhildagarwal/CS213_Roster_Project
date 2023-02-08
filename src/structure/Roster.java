@@ -3,7 +3,6 @@ package structure;
 import data.Student;
 import enumerated.Major;
 
-import java.util.Arrays;
 
 /**
  * Roster Data Structure that holds Student Objects.
