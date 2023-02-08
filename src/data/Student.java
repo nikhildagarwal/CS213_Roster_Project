@@ -110,6 +110,10 @@ public class Student implements Comparable<Student>{
         return creditCompleted;
     }
 
+    /**
+     * Checks to see if the student object is a valid student that can be added to our roster.
+     * @return true if the student is valid to add to the roster, false otherwise.
+     */
     public boolean isValid(){
         return profile.getDate().isValid() && profile.getDate().isValidAge() && creditCompleted>=0 && major!=null;
     }
