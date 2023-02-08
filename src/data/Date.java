@@ -127,7 +127,8 @@ public class Date implements Comparable<Date>{
      * @param today Date object of today.
      * @return true if there is at least 16 years difference, false otherwise.
      */
-    public boolean isValidAge(Date today){
+    public boolean isValidAge(){
+        Date today = new Date();
         int yearDiff = today.year - year;
         if(yearDiff>MIN_AGE){
             return true;

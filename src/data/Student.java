@@ -110,6 +110,10 @@ public class Student implements Comparable<Student>{
         return creditCompleted;
     }
 
+    public boolean isValid(){
+        return profile.getDate().isValid() && profile.getDate().isValidAge() && creditCompleted>=0 && major!=null;
+    }
+
     /**
      * Helper method to format output of the Major portion of our student object.
      * @param major major to be formatted to string.
@@ -118,4 +122,6 @@ public class Student implements Comparable<Student>{
     private String getCode_School(Major major){
         return "("+major.getMajorCode() +" "+ major +" "+ major.getSchool()+")";
     }
+
+
 }

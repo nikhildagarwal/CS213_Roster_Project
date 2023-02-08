@@ -216,12 +216,11 @@ public class RosterManager {
      */
     private void processAdd(String[] tokens,Roster roster){
         Date dob = new Date(tokens[DATE_INDEX]);
-        Date today = new Date();
         if(!dob.isValid()){
             System.out.println("DOB invalid: "+dob+" not a valid calendar date!");
             return;
         }
-        if(!dob.isValidAge(today)){
+        if(!dob.isValidAge()){
             System.out.println("DOB invalid: "+dob+" younger than 16 years old.");
             return;
         }
@@ -240,11 +239,13 @@ public class RosterManager {
         }
         Profile profile = new Profile(tokens[LASTNAME_INDEX],tokens[FIRSTNAME_INDEX],dob);
         Student student = new Student(profile,major,Integer.parseInt(tokens[CREDITS_INDEX]));
-        if(roster.contains(student)){
-            System.out.println(student.getProfile()+" is already in the roster.");
-        }else{
-            roster.add(student);
-            System.out.println(student.getProfile()+" added to the roster.");
+        if(student.isValid()){
+            if(roster.contains(student)){
+                System.out.println(student.getProfile()+" is already in the roster.");
+            }else{
+                roster.add(student);
+                System.out.println(student.getProfile()+" added to the roster.");
+            }
         }
 
     }
