@@ -3,6 +3,8 @@ package structure;
 import data.Student;
 import enumerated.Major;
 
+import java.util.Arrays;
+
 /**
  * Roster Data Structure that holds Student Objects.
  * Ability to add and remove student from our DS.
@@ -144,18 +146,14 @@ public class Roster {
      * @param roster array of student objects to be sorted.
      */
     private void rosterProfileSort(Student[] roster){
-        int[] comparable = new int[size-1];
-        for(int i =0;i<size-1;i++){
-            comparable[i] = roster[i].compareTo(roster[i+1]);
-        }
-        while(containsPositive(comparable)) {
-            for(int i = 0;i<comparable.length;i++){
-                if(comparable[i]>0){
+        boolean foundNegative = true;
+        while(foundNegative){
+            foundNegative = false;
+            for(int i = 0;i<size-1;i++){
+                if(roster[i].compareTo(roster[i+1])>0){
                     swap(roster,i);
+                    foundNegative = true;
                 }
-            }
-            for(int i = 0;i<comparable.length;i++){
-                comparable[i] = roster[i].compareTo(roster[i+1]);
             }
         }
     }
@@ -207,8 +205,6 @@ public class Roster {
      * The comparable in this method, is the (String) grade of the student Ex:"Freshman".
      * @param roster array of student objects to be sorted.
      */
-    
-    
     private void rosterStandingSort(Student[] roster){
         int[] compareables = new int[size-1];
         for(int i =0;i<size-1;i++){

@@ -73,7 +73,7 @@ public class RosterManager {
                         System.out.println(tokens[0]+" is an invalid command!");
                 }
             }catch (Exception e){
-                System.out.println("Invalid input!");
+
             }
         }
     }
