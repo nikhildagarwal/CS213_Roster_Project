@@ -5,7 +5,7 @@ package data;
  * Holds LastName, FirstName, and DoB as parameters.
  * Contains methods to fetch profile values from outside this class,
  * as well as methods that override equals, toString, and compareTo.
- * @author Nikhil Agarwal
+ * @author Nikhil Agarwal, Hyeon Oh
  */
 public class Profile implements Comparable<Profile>{
     private String lname;

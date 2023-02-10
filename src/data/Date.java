@@ -259,7 +259,7 @@ public class Date implements Comparable<Date>{
         date = new Date("1/29/1899");
         expectedOutput = false;
         actualOutput = date.isValid();
-        System.out.println("** Test case #6: a date with an invalid year value. ");
+        System.out.println("** Test case #5: a date with an invalid year value. ");
         testResult(date, expectedOutput, actualOutput);
 
         date = new Date("4/31/2003");
@@ -273,8 +273,5 @@ public class Date implements Comparable<Date>{
         actualOutput = date.isValid();
         System.out.println("** Test case #7: a date with a valid number of days in a specific month. ");
         testResult(date, expectedOutput, actualOutput);
-
-
-
     }
 }
