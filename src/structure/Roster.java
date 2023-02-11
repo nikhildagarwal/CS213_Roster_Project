@@ -145,14 +145,18 @@ public class Roster {
      * @param roster array of student objects to be sorted.
      */
     private void rosterProfileSort(Student[] roster){
-        boolean foundNegative = true;
-        while(foundNegative){
-            foundNegative = false;
-            for(int i = 0;i<size-1;i++){
-                if(roster[i].compareTo(roster[i+1])>0){
+        int[] compareables = new int[size-1];
+        for(int i =0;i<size-1;i++){
+            compareables[i] = roster[i].compareTo(roster[i+1]);
+        }
+        while(containsPositive(compareables)) {
+            for(int i = 0;i<compareables.length;i++){
+                if(compareables[i]>0){
                     swap(roster,i);
-                    foundNegative = true;
                 }
+            }
+            for(int i = 0;i<compareables.length;i++){
+                compareables[i] = roster[i].compareTo(roster[i+1]);
             }
         }
     }
