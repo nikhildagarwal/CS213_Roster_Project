@@ -3,7 +3,7 @@ import data.Date;
 import data.Profile;
 import data.Student;
 import enumerated.Major;
-
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -24,6 +24,7 @@ public class RosterManager {
     public static final int FULL_ROSTER = 0;
     public static final int SCHOOL_ROSTER = 1;
     public static final String ALL_SCHOOLS = "";
+    public static final boolean TOLD_NOT_TO_TERMINATE = true;
 
     /**
      * this is a method that will continuously run the program until the user inputs in a "Q" to terminate the program.

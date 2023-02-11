@@ -11,6 +11,7 @@ public class RunProject1 {
 
     /**
      * main method for project.
+     * **REMEMBER TO ALWAYS PRESS ENTER AFTER ANY INPUT TO THE COMMAND LINE**
      * @param args Null.
      */
     public static void main(String[] args){
