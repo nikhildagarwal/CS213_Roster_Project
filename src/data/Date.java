@@ -39,7 +39,7 @@ public class Date implements Comparable<Date>{
         Calendar calendar = Calendar.getInstance();
         this.year = calendar.get(Calendar.YEAR);
         this.day = calendar.get(Calendar.DATE);
-        this.month = calendar.get(Calendar.MONTH)+INDEX_DIFF;
+        this.month = calendar.get(Calendar.MONTH) + INDEX_DIFF;
     }
 
     /**
@@ -74,7 +74,7 @@ public class Date implements Comparable<Date>{
     @Override
     public String toString(){
         String slash = "/";
-        return month+slash+day+slash+year;
+        return month + slash + day + slash + year;
     }
 
     /**
@@ -85,9 +85,9 @@ public class Date implements Comparable<Date>{
     @Override
     public int compareTo(Date date){
         int compareYear = Integer.compare(year,date.year);
-        if(compareYear==0){
+        if(compareYear == 0){
             int compareMonth = Integer.compare(month,date.month);
-            if(compareMonth==0){
+            if(compareMonth == 0){
                 return Integer.compare(day,date.day);
             }else{
                 return compareMonth;
@@ -104,7 +104,7 @@ public class Date implements Comparable<Date>{
     public boolean isValid(){
         boolean dayCheck = false;
         if(validMonth(month)){
-            if(month==FEBRUARY){
+            if(month == FEBRUARY){
                 boolean leapYear = isLeapYear(year);
                 if(leapYear){
                     dayCheck = validDay(day,LEAP_YEAR_DAYS);
@@ -113,7 +113,7 @@ public class Date implements Comparable<Date>{
                     dayCheck = validDay(day,daysInFeb);
                 }
             }else{
-                int daysInCurrentMonth = daysInMonth[month-INDEX_DIFF];
+                int daysInCurrentMonth = daysInMonth[month - INDEX_DIFF];
                 dayCheck = validDay(day,daysInCurrentMonth);
             }
         }else{
@@ -130,19 +130,19 @@ public class Date implements Comparable<Date>{
     public boolean isValidAge(){
         Date today = new Date();
         int yearDiff = today.year - year;
-        if(yearDiff>MIN_AGE){
+        if(yearDiff > MIN_AGE){
             return true;
-        }else if(yearDiff<MIN_AGE){
+        }else if(yearDiff < MIN_AGE){
             return false;
         }else{
             int monthDiff = today.month-month;
-            if(monthDiff>0){
+            if(monthDiff > 0){
                 return true;
-            }else if(monthDiff<0){
+            }else if(monthDiff < 0){
                 return false;
             }else{
-                int dayDiff = today.day-day;
-                if(dayDiff<0){
+                int dayDiff = today.day - day;
+                if(dayDiff < 0){
                     return false;
                 }else{
                     return true;
@@ -158,7 +158,7 @@ public class Date implements Comparable<Date>{
      * @return true if the day is within the number of days in the month, false otherwise.
      */
     private boolean validDay(int day,int totalDays){
-        if(day>=FIRST_DAY && day<=totalDays){
+        if(day >= FIRST_DAY && day <= totalDays){
             return true;
         }
         return false;
@@ -170,9 +170,9 @@ public class Date implements Comparable<Date>{
      * @return true if leap year, false otherwise.
      */
     private boolean isLeapYear(int year){
-        if(year%QUADRENNIAL==0){
-            if(year%CENTENNIAL==0){
-                if(year%QUATERCENTENNIAL==0){
+        if(year % QUADRENNIAL == 0){
+            if(year % CENTENNIAL == 0){
+                if(year % QUATERCENTENNIAL == 0){
                     return true;
                 }
             }else{
@@ -190,7 +190,7 @@ public class Date implements Comparable<Date>{
     private boolean validYear(int year){
         Calendar calendar = Calendar.getInstance();
         int currYear = calendar.get(Calendar.YEAR);
-        if(currYear>=year && year>MIN_YEAR){
+        if(currYear >= year && year > MIN_YEAR){
             return true;
         }
         return false;
@@ -202,7 +202,7 @@ public class Date implements Comparable<Date>{
      * @return return true if month is valid, false otherwise.
      */
     private boolean validMonth(int month){
-        if(month>=JANUARY && month<=DECEMBER){
+        if(month >= JANUARY && month <= DECEMBER){
             return true;
         }
         return false;

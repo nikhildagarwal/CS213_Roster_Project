@@ -51,7 +51,7 @@ public class Profile implements Comparable<Profile>{
      */
     @Override
     public String toString(){
-        return fname+" "+lname+" "+dob.toString();
+        return fname + " " + lname + " " + dob.toString();
     }
 
     /**
@@ -81,9 +81,9 @@ public class Profile implements Comparable<Profile>{
     @Override
     public int compareTo(Profile profile){
         int compareLastName = lname.compareTo(profile.lname);
-        if(compareLastName==0){
+        if(compareLastName == 0){
             int compareFirstName = fname.compareTo(profile.fname);
-            if(compareFirstName==0){
+            if(compareFirstName == 0){
                 return dob.compareTo(profile.dob);
             }else{
                 return compareFirstName;

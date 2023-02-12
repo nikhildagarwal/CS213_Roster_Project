@@ -74,7 +74,7 @@ public enum Major {
      */
     public int compareWith(Major major){
         int compareSchool = school.compareTo(major.school);
-        if(compareSchool==0){
+        if(compareSchool == 0){
             int departmentCode1 = getDepartmentCode(majorCode);
             int departmentCode2 = getDepartmentCode(major.majorCode);
             return Integer.compare(departmentCode1,departmentCode2);

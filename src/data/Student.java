@@ -36,7 +36,7 @@ public class Student implements Comparable<Student>{
      */
     @Override
     public String toString(){
-        return profile.getFirstName()+" "+profile.getLastName()+ " "+ profile.getDate().toString()+ " "+getCode_School(major)+" credits completed: "+creditCompleted+" "+getStanding(creditCompleted);
+        return profile.getFirstName() + " " + profile.getLastName() + " " + profile.getDate().toString() + " " + getCode_School(major) + " credits completed: " + creditCompleted + " " + getStanding(creditCompleted);
     }
 
     /**
@@ -72,9 +72,9 @@ public class Student implements Comparable<Student>{
     public String getStanding(int creditCompleted){
         if(creditCompleted<SOPHOMORE){
             return "(Freshman)";
-        }else if(creditCompleted>=SOPHOMORE && creditCompleted<JUNIOR){
+        }else if(creditCompleted >= SOPHOMORE && creditCompleted < JUNIOR){
             return "(Sophomore)";
-        }else if(creditCompleted>=JUNIOR && creditCompleted<SENIOR){
+        }else if(creditCompleted >= JUNIOR && creditCompleted < SENIOR){
             return "(Junior)";
         }else{
             return "(Senior)";
@@ -115,7 +115,7 @@ public class Student implements Comparable<Student>{
      * @return true if the student is valid to add to the roster, false otherwise.
      */
     public boolean isValid(){
-        return profile.getDate().isValid() && profile.getDate().isValidAge() && creditCompleted>=0 && major!=null;
+        return profile.getDate().isValid() && profile.getDate().isValidAge() && creditCompleted >= 0 && major != null;
     }
 
     /**
@@ -124,7 +124,7 @@ public class Student implements Comparable<Student>{
      * @return String of formatted major. Ex: CS -> (01:198 CS SAS)
      */
     private String getCode_School(Major major){
-        return "("+major.getMajorCode() +" "+ major +" "+ major.getSchool()+")";
+        return "(" + major.getMajorCode() + " " + major + " " + major.getSchool() + ")";
     }
 
     /**

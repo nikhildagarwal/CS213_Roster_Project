@@ -3,7 +3,6 @@ import data.Date;
 import data.Profile;
 import data.Student;
 import enumerated.Major;
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -13,9 +12,9 @@ import java.util.Scanner;
 */
 public class RosterManager {
     public static final int MIN_CREDITS = 0;
-    public static final int CODE_INDEX =0;
-    public static final int FIRSTNAME_INDEX =1;
-    public static final int LASTNAME_INDEX =2;
+    public static final int CODE_INDEX = 0;
+    public static final int FIRSTNAME_INDEX = 1;
+    public static final int LASTNAME_INDEX = 2;
     public static final int DATE_INDEX = 3;
     public static final int MAJOR_INDEX = 4;
     public static final int CREDITS_INDEX = 5;
@@ -71,7 +70,7 @@ public class RosterManager {
                         System.out.println("Roster Manager terminated.");
                         return;
                     default:
-                        System.out.println(tokens[0]+" is an invalid command!");
+                        System.out.println(tokens[0] + " is an invalid command!");
                 }
             }catch (Exception e){
 
@@ -107,7 +106,7 @@ public class RosterManager {
         Roster schoolRoster = new Roster();
         boolean validSchool = roster.filterBySchool(school,schoolRoster);
         if(!validSchool){
-            System.out.println("School doesn't exist: "+tokens[SCHOOL_INDEX]);
+            System.out.println("School doesn't exist: " + tokens[SCHOOL_INDEX]);
             return;
         }
         processPrint(schoolRoster,SCHOOL_ROSTER,tokens[SCHOOL_INDEX]);
@@ -127,9 +126,9 @@ public class RosterManager {
         Student changedStudent = new Student(profile,major,ANY_NUMBER_OF_CREDITS);
         boolean changed = roster.change(changedStudent,major);
         if(changed){
-            System.out.println(profile+" major changed to "+major);
+            System.out.println(profile + " major changed to " + major);
         }else{
-            System.out.println(profile+" is not in the roster.");
+            System.out.println(profile + " is not in the roster.");
         }
     }
 
@@ -170,26 +169,26 @@ public class RosterManager {
      */
     private void processPrint(Roster roster,int typeOfRoster,String school){
         if(roster.isEmpty()){
-            if(typeOfRoster==FULL_ROSTER){
+            if(typeOfRoster == FULL_ROSTER){
                 System.out.println("Student roster is empty!");
                 return;
             }
-            if(typeOfRoster==SCHOOL_ROSTER){
+            if(typeOfRoster == SCHOOL_ROSTER){
                 System.out.println("School list is empty!");
                 return;
             }
         }
-        if(typeOfRoster==FULL_ROSTER){
+        if(typeOfRoster == FULL_ROSTER){
             System.out.println("* Student roster sorted by last name, first name, DOB **");
         }
-        if(typeOfRoster==SCHOOL_ROSTER){
+        if(typeOfRoster == SCHOOL_ROSTER){
             System.out.println("* Students in "+ school+" *");
         }
         roster.print();
-        if(typeOfRoster==FULL_ROSTER){
+        if(typeOfRoster == FULL_ROSTER){
             System.out.println("* end of roster **");
         }
-        if(typeOfRoster==SCHOOL_ROSTER){
+        if(typeOfRoster == SCHOOL_ROSTER){
             System.out.println("* end of list **");
         }
 
@@ -204,10 +203,10 @@ public class RosterManager {
         Student studentToRemove = new Student(new Profile(tokens[LASTNAME_INDEX],tokens[FIRSTNAME_INDEX],new Date(tokens[DATE_INDEX])),Major.CS,0);
         boolean removed = roster.remove(studentToRemove);
         if(removed){
-            System.out.println(studentToRemove.getProfile()+" removed from the roster.");
+            System.out.println(studentToRemove.getProfile() + " removed from the roster.");
             return;
         }
-        System.out.println(studentToRemove.getProfile()+" is not in the roster.");
+        System.out.println(studentToRemove.getProfile() + " is not in the roster.");
     }
 
     /**
@@ -226,11 +225,11 @@ public class RosterManager {
             return;
         }
         Major major = grabMajor(tokens);
-        if(major ==null){
+        if(major == null){
             return;
         }
         try{
-            if(Integer.parseInt(tokens[CREDITS_INDEX])<MIN_CREDITS){
+            if(Integer.parseInt(tokens[CREDITS_INDEX]) < MIN_CREDITS){
                 System.out.println("Credits completed invalid: cannot be negative!");
                 return;
             }

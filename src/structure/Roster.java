@@ -36,7 +36,7 @@ public class Roster {
      * @return index of the student if found, or -1 if not found.
      */
     private int find(Student student) {
-        for(int i = 0;i<size;i++){
+        for(int i = 0; i < size; i++){
             if(roster[i].equals(student)){
                 return i;
             }
@@ -50,7 +50,7 @@ public class Roster {
     public void grow(){
         int prevLength = roster.length;
         Student[] newRoster = new Student[prevLength+INITIAL_SIZE];
-        for(int i = 0;i<prevLength;i++){
+        for(int i = 0; i < prevLength; i++){
             newRoster[i] = roster[i];
         }
         roster = newRoster;
@@ -62,7 +62,7 @@ public class Roster {
      * @return true if student was successfully added.
      */
     public boolean add(Student student){
-        if(size==roster.length){
+        if(size == roster.length){
             grow();
         }
         roster[size] = student;
@@ -79,7 +79,7 @@ public class Roster {
      */
     public boolean change(Student student, Major newMajor){
         int index = find(student);
-        if(index==NOT_FOUND){
+        if(index == NOT_FOUND){
             return false;
         }
         roster[index].changeMajor(newMajor);
@@ -94,10 +94,10 @@ public class Roster {
      */
     public boolean remove(Student student){
         int index = find(student);
-        if(index==NOT_FOUND){
+        if(index == NOT_FOUND){
             return false;
         }
-        for(int i = index+1;i<size;i++) {
+        for(int i = index + 1; i < size; i++) {
             roster[index] = roster[i];
             index++;
         }
@@ -126,7 +126,7 @@ public class Roster {
      * @return true if the roster is empty, false otherwise.
      */
     public boolean isEmpty(){
-        return size==0;
+        return size == 0;
     }
 
     /**
@@ -134,7 +134,7 @@ public class Roster {
      */
     public void print(){
         rosterProfileSort(roster);
-        for(int i = 0;i<size;i++){
+        for(int i = 0; i < size; i++){
             System.out.println(roster[i]);
         }
     }
@@ -146,16 +146,16 @@ public class Roster {
      */
     private void rosterProfileSort(Student[] roster){
         int[] compareables = new int[size-1];
-        for(int i =0;i<size-1;i++){
+        for(int i = 0; i < size - 1; i++){
             compareables[i] = roster[i].compareTo(roster[i+1]);
         }
         while(containsPositive(compareables)) {
-            for(int i = 0;i<compareables.length;i++){
-                if(compareables[i]>0){
+            for(int i = 0; i < compareables.length; i++){
+                if(compareables[i] > 0){
                     swap(roster,i);
                 }
             }
-            for(int i = 0;i<compareables.length;i++){
+            for(int i = 0; i < compareables.length; i++){
                 compareables[i] = roster[i].compareTo(roster[i+1]);
             }
         }
@@ -166,7 +166,7 @@ public class Roster {
      */
     public void printByMajor(){
         rosterMajorSort(roster);
-        for(int i = 0;i<size;i++){
+        for(int i = 0; i < size; i++){
             System.out.println(roster[i]);
         }
     }
@@ -178,16 +178,16 @@ public class Roster {
      */
     private void rosterMajorSort(Student[] roster){
         int[] compareables = new int[size-1];
-        for(int i =0;i<size-1;i++){
+        for(int i = 0; i < size - 1; i++){
             compareables[i] = roster[i].getMajor().compareWith(roster[i+1].getMajor());
         }
         while(containsPositive(compareables)) {
-            for(int i = 0;i<compareables.length;i++){
-                if(compareables[i]>0){
+            for(int i = 0; i < compareables.length; i++){
+                if(compareables[i] > 0){
                     swap(roster,i);
                 }
             }
-            for(int i = 0;i<compareables.length;i++){
+            for(int i = 0; i < compareables.length; i++){
                 compareables[i] = roster[i].getMajor().compareWith(roster[i+1].getMajor());
             }
         }
@@ -198,7 +198,7 @@ public class Roster {
      */
     public void printByStanding(){
         rosterStandingSort(roster);
-        for(int i = 0;i<size;i++){
+        for(int i = 0; i < size; i++){
             System.out.println(roster[i]);
         }
     }
@@ -210,18 +210,18 @@ public class Roster {
      */
     private void rosterStandingSort(Student[] roster){
         int[] compareables = new int[size-1];
-        for(int i =0;i<size-1;i++){
+        for(int i = 0; i < size - 1; i++){
             String grade1 = roster[i].getStanding(roster[i].getCreditCompleted());
             String grade2 = roster[i+1].getStanding(roster[i+1].getCreditCompleted());
             compareables[i] = grade1.compareTo(grade2);
         }
         while(containsPositive(compareables)) {
-            for(int i = 0;i<compareables.length;i++){
-                if(compareables[i]>0){
+            for(int i = 0; i<compareables.length; i++){
+                if(compareables[i] > 0){
                     swap(roster,i);
                 }
             }
-            for(int i = 0;i<compareables.length;i++){
+            for(int i = 0; i<compareables.length; i++){
                 String major1 = roster[i].getStanding(roster[i].getCreditCompleted());
                 String major2 = roster[i+1].getStanding(roster[i+1].getCreditCompleted());
                 compareables[i] = major1.compareTo(major2);
@@ -244,7 +244,7 @@ public class Roster {
         if(!validSchool){
             return false;
         }
-        for(int i = 0;i<size;i++){
+        for(int i = 0; i<size; i++){
             if(roster[i].getMajor().getSchool().equals(school)){
                 newRoster.add(roster[i]);
             }
@@ -261,7 +261,7 @@ public class Roster {
      */
     private boolean containsPositive(int[] compareables){
         for(int curr:compareables){
-            if(curr>0){
+            if(curr > 0){
                 return true;
             }
         }
