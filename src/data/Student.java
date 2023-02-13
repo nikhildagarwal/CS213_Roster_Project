@@ -145,8 +145,8 @@ public class Student implements Comparable<Student>{
     }
 
     /**
-     * Testbed main to test the isValid method for the Student class
-     * @param args commnd line arguments 
+     * Testbed main to test the compareTo method for the Student class
+     * @param args command line arguments 
      */
     public static void main(String[] args)
     {
