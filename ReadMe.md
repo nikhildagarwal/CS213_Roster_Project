@@ -14,13 +14,21 @@ line command. The operation code is case-sensitive, which means operation codes 
 and should be rejected by the software.
 
 A - add a student
+
 R - remove secified student
+
 P - display roster sorted by last name, first name, DoB
+
 PS - display roster by standing
+
 PC - display roster by school,major
+
 L - list students in specified school by last name, first name, DoB
+
 C - change students major to specified major
+
 Q - Stop program execution
+
 
 Project1TestCases.txt contains a list of example inputs to this software. The expected output txt file is provided as well
 
